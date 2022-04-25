@@ -10,6 +10,16 @@ public class UserServiceIMPL implements IUserService {
     public static List<User> userList = new ConfigReadAndWriteFile<User>().readFromFile(PATH_USER);
 
     @Override
+    public void edit(int id, User user) {
+
+    }
+
+    @Override
+    public void delete(int id, User user) {
+
+    }
+
+    @Override
     public List<User> findAll() {
         new ConfigReadAndWriteFile<User>().writeToFile(PATH_USER, userList);
         return userList;
@@ -18,6 +28,11 @@ public class UserServiceIMPL implements IUserService {
     @Override
     public void save(User user) {
         userList.add(user);
+    }
+
+    @Override
+    public User findById(int id) {
+        return null;
     }
 
     @Override

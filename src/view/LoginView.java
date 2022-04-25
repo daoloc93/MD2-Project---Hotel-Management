@@ -16,7 +16,7 @@ public class LoginView {
         String password = scanner.nextLine();
         SignInDTO signInDTO = new SignInDTO(username,password);
         if(userController.login(signInDTO)){
-            new ProfileView();
+            new Main();
         } else {
             System.err.println("Login failed! Please check username or password! ");
             new LoginView();

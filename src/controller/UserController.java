@@ -42,7 +42,7 @@ public class UserController {
                     break;
             }
         });
-        User user = new User(id,signUpDTO.getName(),signUpDTO.getUsername(),signUpDTO.getPassword(),roleSet);
+        User user = new User(id, signUpDTO.getName(), signUpDTO.getUsername(), signUpDTO.getPassword(),roleSet);
         userServiceIMPL.save(user);
         userServiceIMPL.findAll();
     }

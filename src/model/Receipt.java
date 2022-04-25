@@ -7,14 +7,14 @@ public class Receipt {
     int roomNumber;
     String customerName;
     String staffName;
-    Date checkIn;
-    Date checkOut;
+    String checkIn;
+    String checkOut;
     int totalPrice;
 
     public Receipt() {
     }
 
-    public Receipt(int receiptID, int roomNumber, String customerName, String staffName, Date checkIn, Date checkOut, int totalPrice) {
+    public Receipt(int receiptID, int roomNumber, String customerName, String staffName, String checkIn, String checkOut, int totalPrice) {
         this.receiptID = receiptID;
         this.roomNumber = roomNumber;
         this.customerName = customerName;
@@ -56,19 +56,19 @@ public class Receipt {
         this.staffName = staffName;
     }
 
-    public Date getCheckIn() {
+    public String getCheckIn() {
         return checkIn;
     }
 
-    public void setCheckIn(Date checkIn) {
+    public void setCheckIn(String checkIn) {
         this.checkIn = checkIn;
     }
 
-    public Date getCheckOut() {
+    public String getCheckOut() {
         return checkOut;
     }
 
-    public void setCheckOut(Date checkOut) {
+    public void setCheckOut(String checkOut) {
         this.checkOut = checkOut;
     }
 
@@ -87,8 +87,8 @@ public class Receipt {
                 ", roomNumber=" + roomNumber +
                 ", customerName='" + customerName + '\'' +
                 ", staffName='" + staffName + '\'' +
-                ", checkIn=" + checkIn +
-                ", checkOut=" + checkOut +
+                ", checkIn='" + checkIn + '\'' +
+                ", checkOut='" + checkOut + '\'' +
                 ", totalPrice=" + totalPrice +
                 '}';
     }

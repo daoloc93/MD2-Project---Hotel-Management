@@ -8,6 +8,17 @@ import java.util.List;
 public class UserPrincipalServiceIMPL implements IUserPrincipalService{
     public static String PATH_USER_PRINCIPAL = ConfigReadAndWriteFile.PATH + "user_principal.txt";
     public static List<UserPrincipal> userPrincipalList = new ConfigReadAndWriteFile<UserPrincipal>().readFromFile(PATH_USER_PRINCIPAL);
+
+    @Override
+    public void edit(int id, UserPrincipal userPrincipal) {
+
+    }
+
+    @Override
+    public void delete(int id, UserPrincipal userPrincipal) {
+
+    }
+
     @Override
     public List<UserPrincipal> findAll() {
         new ConfigReadAndWriteFile<UserPrincipal>().writeToFile(PATH_USER_PRINCIPAL,userPrincipalList);
@@ -18,6 +29,11 @@ public class UserPrincipalServiceIMPL implements IUserPrincipalService{
     public void save(UserPrincipal userPrincipal) {
         userPrincipalList.clear();
         userPrincipalList.add(userPrincipal);
+    }
+
+    @Override
+    public UserPrincipal findById(int id) {
+        return null;
     }
 }
 

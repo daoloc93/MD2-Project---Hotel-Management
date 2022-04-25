@@ -9,6 +9,17 @@ import java.util.List;
 public class RoleServiceIMPL implements IRoleService{
     public static String PATH_ROLE = ConfigReadAndWriteFile.PATH+"role.txt";
     public static List<Role> roleList = new ConfigReadAndWriteFile<Role>().readFromFile(PATH_ROLE);
+
+    @Override
+    public void edit(int id, Role role) {
+
+    }
+
+    @Override
+    public void delete(int id, Role role) {
+
+    }
+
     @Override
     public List<Role> findAll() {
         if(roleList.size()>=3){
@@ -25,6 +36,11 @@ public class RoleServiceIMPL implements IRoleService{
     @Override
     public void save(Role role) {
         roleList.add(role);
+    }
+
+    @Override
+    public Role findById(int id) {
+        return null;
     }
 
     @Override
